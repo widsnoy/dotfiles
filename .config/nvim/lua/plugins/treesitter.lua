@@ -1,0 +1,56 @@
+return {
+    'nvim-treesitter/nvim-treesitter',
+    lazy = false,
+    build = ':TSUpdate',
+    dependencies = {
+        { 
+            'nvim-treesitter/nvim-treesitter-textobjects', 
+            branch = 'main',
+            init = function()
+                vim.g.no_plugin_maps = true
+            end,
+        },
+    },
+    opts = {
+        indent = { enable = true },
+        highlight = { enable = true },
+        folds = { enable = true },
+        ensure_installed = {
+            "html", "html_tags", "latex", "lua", "markdown", "markdown_inline", "rust", "toml", "typst", "vimdoc", "yaml", "regex"
+        },
+        textobjects = {
+            select = {
+                enable = true,
+                lookahead = true,
+                keymaps = {
+                    ["af"] = "@function.outer",
+                    ["if"] = "@function.inner",
+                    ["ac"] = "@class.outer",
+                    ["ic"] = "@class.inner",
+                    ["aa"] = "@parameter.outer",
+                    ["ia"] = "@parameter.inner",
+                },
+            },
+            move = {
+                enable = true,
+                set_jumps = true,
+                goto_next_start = {
+                    ["]m"] = "@function.outer",
+                    ["]]"] = "@class.outer",
+                },
+                goto_next_end = {
+                    ["]M"] = "@function.outer",
+                    ["]["] = "@class.outer",
+                },
+                goto_previous_start = {
+                    ["[m"] = "@function.outer",
+                    ["[["] = "@class.outer",
+                },
+                goto_previous_end = {
+                    ["[M"] = "@function.outer",
+                    ["[]"] = "@class.outer",
+                },
+            },
+        },
+    },
+}

@@ -1,0 +1,10 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR --export EDITOR:nvim
+SETUVAR GTK_USE_PORTAL:1
+SETUVAR --export LLVM_SYS_211_PREFIX:/usr
+SETUVAR XMODIFIERS:\x40im\x3dfcitx
+SETUVAR __fish_initialized:4300
+SETUVAR fish_greeting:\x1d
+SETUVAR --export http_proxy:http\x3a//127\x2e0\x2e0\x2e1\x3a10809
+SETUVAR --export https_proxy:http\x3a//127\x2e0\x2e0\x2e1\x3a10809
