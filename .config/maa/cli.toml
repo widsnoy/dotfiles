@@ -1,0 +1,20 @@
+"$schema" = "./schemas/cli.schema.json"
+
+[core]
+channel = "Stable"
+
+[core.components]
+library = true
+resource = true
+
+[cli]
+channel = "Alpha"
+
+[resource]
+auto_update = true
+warn_on_update_failure = true
+backend = "git"
+
+[hot_update]
+api_url = "https://github.com/MaaAssistantArknights/MaaRelease/raw/main/MaaAssistantArknights/api"
+check_interval = 3600
