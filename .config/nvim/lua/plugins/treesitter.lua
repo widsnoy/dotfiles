@@ -12,11 +12,12 @@ return {
         },
     },
     opts = {
+        sync_install = true,
         indent = { enable = true },
         highlight = { enable = true },
         folds = { enable = true },
         ensure_installed = {
-            "html", "html_tags", "latex", "lua", "markdown", "markdown_inline", "rust", "toml", "typst", "vimdoc", "yaml", "regex"
+            "html", "latex", "lua", "markdown", "markdown_inline", "rust", "toml", "typst", "vimdoc", "yaml", "regex"
         },
         textobjects = {
             select = {

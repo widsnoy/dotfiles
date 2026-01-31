@@ -6,7 +6,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     if vim.v.shell_error ~= 0 then
         vim.api.nvim_echo({
             { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-            { out, "WarningMsg" },
+            { out,                            "WarningMsg" },
             { "\nPress any key to exit..." },
         }, true, {})
         vim.fn.getchar()
@@ -18,18 +18,18 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     -- Colorscheme
     {
-        "catppuccin/nvim", 
+        "catppuccin/nvim",
         lazy = false,
         priority = 1000,
         opts = {
             transparent_background = true,
-            term_colors = true,
+            term_colors = false,
             no_italic = true,
             custom_highlights = function(colors)
                 return {
-                    LineNr = { fg = colors.mauve }, 
+                    LineNr = { fg = colors.mauve },
                     CursorLineNr = { fg = colors.yellow, style = { "bold" } },
-                    SignColumn = { bg = "NONE" }, 
+                    SignColumn = { bg = "NONE" },
                 }
             end
         },
@@ -48,7 +48,7 @@ require("lazy").setup({
             delay = 1000,
             spec = {
                 { "<leader>w", proxy = "<c-w>", group = "windows" }
-            }, 
+            },
         },
     },
     -- Rust
