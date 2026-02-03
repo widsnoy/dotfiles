@@ -23,17 +23,45 @@
                     "temperature": true,
                     "tool_call": true,
                     "attachment": true
+                }
+            }
+        },
+        "my-anthropic-sale": {
+            "npm": "@ai-sdk/anthropic",
+            "name": "Anthropic Sale",
+            "options": {
+                "baseURL": "https://www.packyapi.com/v1"
+            },
+            "models": {
+                "claude-sonnet-4-5-20250929": {
+                    "name": "Claude 4.5 Sonnet",
+                    "cost": {
+                        "input": 0.45,
+                        "output": 2.25,
+                    },
+                    "limit": {
+                        "context": 200000,
+                        "output": 64000
+                    },
+                    "reasoning": true,
+                    "temperature": true,
+                    "tool_call": true,
+                    "attachment": true
                 },
                 "claude-haiku-4-5-20251001": {
                     "name": "Claude 4.5 Haiku",
                     "cost": {
-                        "input": 0.3,
-                        "output": 1.5,
+                        "input": 0.15,
+                        "output": 0.75,
                     },
                     "limit": {
                         "context": 200000,
                         "output": 64000,
-                    }
+                    },
+                    "reasoning": true,
+                    "temperature": true,
+                    "tool_call": true,
+                    "attachment": true
                 }
             }
         }
