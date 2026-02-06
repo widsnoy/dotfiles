@@ -1,0 +1,5 @@
+[user]
+	email = ricofx47@outlook.com
+	name = widsnoy
+[http "https://github.com"]
+	proxy = socks5://127.0.0.1:10809
